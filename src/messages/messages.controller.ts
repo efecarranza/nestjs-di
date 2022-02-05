@@ -6,8 +6,8 @@ import { MessagesService } from './messages.service';
 export class MessagesController {
 	messagesService: MessagesService;
 
-	constructor() {
-		this.messagesService = new MessagesService();
+	constructor(messagesService: MessagesService) {
+		this.messagesService = messagesService;
 	}
 
 	@Get()
